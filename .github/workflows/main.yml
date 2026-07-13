@@ -24,8 +24,9 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
+      # Correção: Agora apontando explicitamente para a pasta atual (.)
       - name: Rodar Lint
-        run: npm run lint
+        run: npx next lint .
 
       - name: Rodar Testes
         run: npm run test
